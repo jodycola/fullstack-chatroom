@@ -1,5 +1,6 @@
 import React from 'react';
 import './InfoBar.css';
+import Theme from '../Theme/Theme';
 import { AiOutlineClose } from 'react-icons/ai';
 import { HiOutlineStatusOnline } from 'react-icons/hi';
 
@@ -13,8 +14,8 @@ const InfoBar = ({ room }) => (
         </div>
 
         <div className="rightInnerContainer">
+            <Theme />
             <a href="/"> <AiOutlineClose className="close-icon" /> </a>
-
         </div>
 
     </div>
