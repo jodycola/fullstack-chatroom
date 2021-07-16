@@ -4,8 +4,11 @@ import Theme from '../Theme/Theme';
 import { AiOutlineClose } from 'react-icons/ai';
 import { HiOutlineStatusOnline } from 'react-icons/hi';
 
-const InfoBar = ({ room }) => (
-    <div className="infoBar">
+const InfoBar = ({ room, handleSelect, theme }) => {
+
+
+    return (
+    <div className="infoBar" style={{background: theme}}>
         <div className="leftInnerContainer">
             <HiOutlineStatusOnline className="online-icon" />
             <br/>
@@ -14,11 +17,12 @@ const InfoBar = ({ room }) => (
         </div>
 
         <div className="rightInnerContainer">
-            <Theme />
+            <Theme handleSelect={handleSelect} theme={theme} />
             <a href="/"> <AiOutlineClose className="close-icon" /> </a>
         </div>
 
     </div>
-)
+    )
+}
 
 export default InfoBar;

@@ -1,19 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Select from 'react-select';
 import './Theme.css';
 
-const Theme = () => {
-    const [theme, setTheme] = useState("")
+const Theme = ({ theme, handleSelect }) => {
 
     const options = [
-        { value: 'red', label: "Apple" },
+        { value: 'red', label: "Red" },
         { value: 'orange', label: "Orange" },
-        { value: 'yellow', label: "Pineapple" },
-        { value: 'green', label: "Lime" },
-        { value: 'blue', label: "Blueberry" },
+        { value: 'khaki', label: "Yellow" },
+        { value: 'green', label: "Green" },
+        { value: 'blue', label: "Blue" },
         { value: 'white', label: "Neutral" },
         { value: 'black', label: "Noir" },
-        { value: 'dark', label: "Dark Mode" }
     ]
 
     return (
@@ -22,7 +20,7 @@ const Theme = () => {
             className="theme-select"
             placeholder="Select a theme"
             value={theme}
-            onChange={(event) => setTheme(event.value)}
+            onChange={(event) => handleSelect(event.value)}
             options={options}
         />
     </div>

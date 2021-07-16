@@ -17,6 +17,8 @@ input:focus, textarea:focus, select:focus{
 
 .sendButton {
   color: #fff !important;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: black;
   text-transform: uppercase;
   text-decoration: none;
   background: #2979FF;
