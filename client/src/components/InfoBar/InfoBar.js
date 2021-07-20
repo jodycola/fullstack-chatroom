@@ -1,10 +1,10 @@
 import React from 'react';
 import './InfoBar.css';
 import Theme from '../Theme/Theme';
-import { AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineArrowRight } from 'react-icons/ai';
 import { HiOutlineStatusOnline } from 'react-icons/hi';
 
-const InfoBar = ({ room, handleSelect, theme }) => {
+const InfoBar = ({ room, handleSelect, theme, handleShowMembers }) => {
 
 
     return (
@@ -19,6 +19,7 @@ const InfoBar = ({ room, handleSelect, theme }) => {
         <div className="rightInnerContainer">
             <Theme handleSelect={handleSelect} theme={theme} />
             <a href="/"> <AiOutlineClose className="close-icon" /> </a>
+            <AiOutlineArrowRight className="arrow-icon" onClick={handleShowMembers} />
         </div>
 
     </div>

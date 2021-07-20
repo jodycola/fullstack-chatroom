@@ -16,10 +16,15 @@ const Chat = ({ location }) => {
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
     const [theme, setTheme] = useState("");
+    const [openMembersList, setOpenMembersList] = useState(false);
     const ENDPOINT = 'http://localhost:5000/';
 
     const handleSelect = (value) => {
         setTheme(value)
+    }
+
+    const handleShowMembers = () => {
+        setOpenMembersList(!openMembersList)
     }
     
     useEffect(() => {
@@ -62,11 +67,15 @@ const Chat = ({ location }) => {
     return (
         <div className="outerContainer">
             <div className="container">
-            <InfoBar theme={theme} handleSelect={handleSelect} room={room}/>
+            <InfoBar theme={theme} handleSelect={handleSelect} room={room} handleShowMembers={handleShowMembers} />
             <Messages messages={messages} name={name} />
             <Input theme={theme} message={message} setMessage={setMessage} sendMessage={sendMessage} />
             </div>
+            {openMembersList ? 
             <Users users={users}/>
+            :
+            null
+            }
         </div>
     )
 }

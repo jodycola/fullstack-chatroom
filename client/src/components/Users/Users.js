@@ -8,7 +8,7 @@ const Users = ({ users }) => (
       users
         ? (
           <div>
-            <h1>People currently chatting:</h1>
+            <h1>Online:</h1>
             <div className="activeContainer">
               <h2>
                 {users.map(({name}) => (

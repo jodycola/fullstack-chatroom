@@ -1,7 +1,7 @@
 .usersContainer {
-  display: flex;
-  flex-direction: column;
-  margin-left: 100px;
+  position: relative;
+  width: 10%;
+  left: 100px;
   color: #FFF;
   height: 60%;
   justify-content: space-between;
@@ -24,6 +24,7 @@
 
 .usersContainer h1 {
   margin-bottom: 0px;
+  border-bottom: 1px solid white;
 }
 
 @media (min-width: 320px) and (max-width: 1200px) {

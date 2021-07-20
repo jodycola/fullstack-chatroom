@@ -40,8 +40,17 @@
     position: relative;
     height: 20px;
     width: 20px;
-    top: 10%;
     left: 50%;
     -webkit-text-stroke-width: .5px;
     -webkit-text-stroke-color: black;
+}
+
+.arrow-icon {
+  color: #FFF;
+  position: relative;
+  height: 20px;
+  width: 20px;
+  left: 5%;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: black;
 }
